@@ -14,7 +14,7 @@
 			pr._height = Math.max.apply(this,pr.shape.replace(/\d+,/g,'').split(' '));
 
 			var fr='';
-			fr+='<svg preserveAspectRatio="xMinYMin slice" width="'+(pr._width+60)+'px" height="'+(pr._height+60)+'px" viewBox="-30 -30 '+(pr._width+60)+' '+(pr._height+60)+'" id="photo_frame'+id+'" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">';
+			fr+='<svg class="'+$(this).attr('class')+'" preserveAspectRatio="xMinYMin slice" width="'+(pr._width+60)+'px" height="'+(pr._height+60)+'px" viewBox="-30 -30 '+(pr._width+60)+' '+(pr._height+60)+'" id="photo_frame'+id+'" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">';
 			fr+='<defs><filter id="F'+id+'"><feGaussianBlur stdDeviation="10" /></filter>';
 			fr+='<clipPath id="clipPath'+id+'"><path id="path'+id+'" d="M'+pr.shape+'z"/></clipPath></defs>';
 			fr+='<use viewBox="-30 -30" fill="black" filter="url(#F'+id+')" xlink:href = "#path'+id+'"/>';
